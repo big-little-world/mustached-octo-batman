@@ -18,27 +18,28 @@ int main()
 {
 	
 	int n;
-	int b,c, t;
+	int a,b, t;
 	cout << "n=";
 	cin >> n;
-	int *a = new int [n];
+	int *c = new int [n];
 	for (t = 0; t < n; t++)
-		cin >> a[t];
+		cin >> c[t];
 	cout << "\n";
-	for (t = 0; t < n; t++) cout << a[t] << ' ';
+	for (t = 0; t < n; t++) cout << c[t] << ' ';
 	
-	for (b = 1; b < n; b++)
-		for (c = n - 1; c >= b; c--){
-			if (a[c - 1] > a[c]){
-				t = a[c - 1];
-				a[c - 1] = a[c];
-				a[c] = t;
+	for (a = 1; a < n; a++)
+		for (b = n - 1; b >= a; b--){
+			if (c[b - 1] > c[b]){
+				t = c[b - 1];
+				c[b - 1] = c[b];
+				c[b] = t;
 			}
 		}
 
-	cout << "\n"<<"Array after sortirovka:" << "\n";
+	cout << "\n"<<"Massiv posle sortirovki:" << "\n";
 	for (t = 0; t < n; t++)
-		cout << a[t] << ' ';
+		cout << c[t] << ' ';
 		system("Pause");
 	return 0;
 }
+	
